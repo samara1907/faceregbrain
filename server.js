@@ -7,7 +7,7 @@ const knex = require('knex');
 const register = require('./controlar/register');
 const signin = require('./controlar/signin');
 const profile = require('./controlar/profile');
-const image = require('./controlar/image')
+const image = require('./controlar/image');
 
 
 const db= knex({
