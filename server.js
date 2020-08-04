@@ -10,6 +10,7 @@ const profile = require('./controlar/profile');
 const image = require('./controlar/image');
 
 
+
 const db= knex({
   client: 'pg',
   connection: {
@@ -36,6 +37,8 @@ app.get('/profile/:id', (req,res)=>{profile.handleProfileGet(req,res,db)})
 
 app.put('/image' , (req,res)=>{image.handleImage(req,res,db)})
 app.post('/imageapi' , (req,res)=>{image.handleApiCall(req,res)})
+
+var PORT = process.env.PORT || 3000 ;
 
 app.listen(process.env.PORT || 3000, ()=>{
 	console.log(`done ${process.env.PORT}`);
